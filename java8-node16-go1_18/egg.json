@@ -10,7 +10,8 @@
     "description": null,
     "features": null,
     "images": [
-        "docker.io\/e3ndr\/java8-node16-go1_18"
+        "docker.io\/e3ndr\/java8-node16-go1_18:arm64",
+        "docker.io\/e3ndr\/java8-node16-go1_18:amd64"
     ],
     "file_denylist": [],
     "startup": "{{COMMAND}}",
@@ -23,7 +24,7 @@
     "scripts": {
         "installation": {
             "script": null,
-            "container": "alpine:3.4",
+            "container": "scratch",
             "entrypoint": "ash"
         }
     },
