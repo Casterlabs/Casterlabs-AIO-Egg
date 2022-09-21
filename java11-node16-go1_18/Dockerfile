@@ -1,5 +1,7 @@
-# This gives us Java8
+# This gives us Java11
 FROM       --platform=$TARGETOS/$TARGETARCH openjdk:11.0.15-jre-buster
+
+RUN        apt install libpulse-dev
 
 # Install NodeJS and NPM and Yarn
 RUN        curl -sL "https://deb.nodesource.com/setup_16.x" | bash -

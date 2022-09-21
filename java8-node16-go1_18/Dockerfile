@@ -1,6 +1,8 @@
 # This gives us Java8
 FROM       --platform=$TARGETOS/$TARGETARCH openjdk:8u332-jre-buster
 
+RUN        apt install libpulse-dev
+
 # Install NodeJS and NPM and Yarn
 RUN        curl -sL "https://deb.nodesource.com/setup_16.x" | bash -
 RUN        curl -sS "https://dl.yarnpkg.com/debian/pubkey.gpg" | apt-key add -
