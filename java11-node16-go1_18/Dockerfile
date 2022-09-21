@@ -1,3 +1,6 @@
+ARG        TARGETOS
+ARG        TARGETARCH
+
 # This gives us Java11
 FROM       --platform=$TARGETOS/$TARGETARCH openjdk:11.0.15-jre-buster
 
@@ -13,7 +16,6 @@ RUN        apt upgrade -qq -y
 RUN        rm -rf /var/lib/apt/lists/*
 
 # Install Go
-ARG        TARGETARCH
 RUN        curl -sL "https://go.dev/dl/go1.18.2.linux-$TARGETARCH.tar.gz" | tar -xz -C /usr/local
 ENV        GOROOT /usr/local/go
 ENV		   GOPATH /home/container/go
